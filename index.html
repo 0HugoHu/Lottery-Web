@@ -169,7 +169,7 @@
             return [0.1 * Math.random() + 0.01, -(0.1 * Math.random() + 0.01)];
         };
         var getKey = function(item){
-            return item.name + '-' + item.phone;
+            return item.name + '-' + item.genre;
         };
         var createHTML = function(){
             var html = [ '<ul>' ];
@@ -202,7 +202,7 @@
                 .map(function(m){
                   choosed[getKey(m)] = 1;
                   list[m.index].style.color = color;
-                  return m.name + '<br/>' + m.phone; 
+                  return m.name + '<br/>' + m.genre; 
                 });
             localStorage.setItem('choosed', JSON.stringify(choosed));
             return ret;
@@ -227,7 +227,7 @@
                     textColour: null,
                     initial: speed(),
                     dragControl: 1,
-                    textHeight: 11
+                    textHeight: 14
                 });
             },
             methods: {
@@ -250,7 +250,7 @@
                             $('#result').css('display', 'block').html('<span>Exhausted all options</span>');
                             return
                         }
-                        $('#result').css('display', 'block').html('<span>' + ret.join('</span><span>') + '</span>');
+                        $('#result').css('display', 'block', '').html('<span style="font-size:16px;">' + ret.join('</span><span>') + '</span>');
                         TagCanvas.Reload('myCanvas');
                         setTimeout(function(){
                             localStorage.setItem(new Date().toString(), JSON.stringify(ret));
