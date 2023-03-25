@@ -145,16 +145,15 @@
         @media only screen and (max-width: 1026px) {
             .desktop-only {
                 display:none !important;
-                background-image: url(../img/icon-wall-mobile.jpg) !important;
+                background-image: url(../img/icon-wall.jpg) !important;
             }
         } 
     </style>
 </head>
 <body>
-<div id="main" class="wall">
-</div>
-<div id="result" class="result desktop-only"></div>
-<div id="result" class="result mobile-only"></div>
+<div id="main" class="wall desktop-only"></div>
+<div id="main" class="wall mobile-only"></div>
+<div id="result" class="result"></div>
 <div id="tools" class="tools">
      <button
         v-for="value in btns"
