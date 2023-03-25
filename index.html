@@ -97,16 +97,16 @@
             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
         }
         .button-success {
-            background: rgb(28, 184, 65);
+            background: rgb(0, 180, 37);
         }
         .button-error {
-            background: rgb(202, 60, 60);
+            background: rgb(228, 64, 95);
         }
         .button-warning {
-            background: rgb(223, 117, 20);
+            background: rgb(218, 85, 47);
         }
         .button-secondary {
-            background: rgb(66, 184, 221);
+            background: rgb(76, 117, 163);
         }
         .tools {
             position: absolute;
@@ -148,14 +148,14 @@
         v-for="value in btns"
         @click="onClick(value)"
         class="pure-button"
-        :class="{ 'button-error': selected == value}"
+        :class="{ 'button-warning': selected == value}"
        >{{value}}</button>
     <button
        class="pure-button"
        @click="toggle"
-       :class="{'button-secondary': !running,
-               'button-success': running}">{{running?'Stop':'Begin'}}</button>
-    <button class="pure-button button-warning" @click="reset">Reset</button>
+       :class="{'button-success': !running,
+               'button-error': running}">{{running?'Stop':'Begin'}}</button>
+    <button class="pure-button button-secondary" @click="reset">Reset</button>
 </div>
 <script type="text/javascript" src="js/zepto.js"></script>
 <script type="text/javascript" src="js/vue.js"></script>
@@ -215,10 +215,10 @@
         new Vue({
             el: '#tools',
             data: {
-                selected: 30,
+                selected: 1,
                 running: false,
                 btns: [
-                    3, 2, 1
+                    5, 3, 1
                 ]
             },
             mounted () {
@@ -227,12 +227,12 @@
                     textColour: null,
                     initial: speed(),
                     dragControl: 1,
-                    textHeight: 14
+                    textHeight: 11
                 });
             },
             methods: {
                 reset: function(){
-                    if(confirm('确定要重置么？所有之前的抽奖历史将被清除！')){
+                    if(confirm('All history will be cleared, are you sure?')){
                         localStorage.clear();
                         location.reload(true);
                     }
@@ -247,7 +247,7 @@
                         TagCanvas.SetSpeed('myCanvas', speed());
                         var ret = lottery(this.selected);
                         if (ret.length === 0) {
-                            $('#result').css('display', 'block').html('<span>已抽完</span>');
+                            $('#result').css('display', 'block').html('<span>Exhausted all options</span>');
                             return
                         }
                         $('#result').css('display', 'block').html('<span>' + ret.join('</span><span>') + '</span>');
