@@ -24,10 +24,10 @@
         }
         .result span {
             display: inline-block;
-            font-size: 25px;
+            font-size: 16px;
             width: 150px;
             background: #fff;
-            line-height: 30px;
+            line-height: 20px;
             color: #000;
             margin: 5px;
             border-radius: 10px;
@@ -227,7 +227,7 @@
                     textColour: null,
                     initial: speed(),
                     dragControl: 1,
-                    textHeight: 14
+                    textHeight: 16
                 });
             },
             methods: {
@@ -250,7 +250,7 @@
                             $('#result').css('display', 'block').html('<span>Exhausted all options</span>');
                             return
                         }
-                        $('#result').css('display', 'block', '').html('<span style="font-size:16px;">' + ret.join('</span><span>') + '</span>');
+                        $('#result').css('display', 'block', '').html('<span>' + ret.join('</span><span>') + '</span>');
                         TagCanvas.Reload('myCanvas');
                         setTimeout(function(){
                             localStorage.setItem(new Date().toString(), JSON.stringify(ret));
