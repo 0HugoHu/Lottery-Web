@@ -234,5 +234,13 @@ var member = [
   {
     "genre": "Thai",
     "name": "Noodle 501"
+  },
+  {
+    "genre": "Taco",
+    "name": "bartaco"
+  },
+  {
+    "genre": "Chinese",
+    "name": "Dragon Inn"
   }
 ]
