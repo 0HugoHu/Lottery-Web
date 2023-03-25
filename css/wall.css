@@ -1,14 +1,22 @@
 html, body {width: 100%; height: 100%;}
 .wall {width: 100%; height: 100%;
-    background-image: url(../img/icon-wall.jpg);
     overflow: hidden;
-    object-fit: cover;
     background-color: #121936;
     background-size: 100% 100% ;
     background-position: center center;
     background-repeat: no-repeat;}
 .photos-wall {width:100%; height:100%;}
 .messages {width: 30%;  float: left;  position: relative; top: 52px; left: 0}
+
+.wall .bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-image: url(../img/icon-wall.jpg);
+    background-size: 100% 100% ;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 
 
 /*照片墙*/
