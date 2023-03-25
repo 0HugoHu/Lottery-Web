@@ -163,10 +163,11 @@
     (function(){
         // get windows size
         var width = window.innerWidth;
-        var height = window.innerHeight;
         // if windows is on mobile device, set background image of wall to mobile version
         if (width < 1024) {
             document.getElementById('main').style.backgroundImage = 'url(../img/icon-wall-mobile.jpg)';
+        } else {
+            document.getElementById('main').style.backgroundImage = 'url(../img/icon-wall.jpg)';
         }
         var choosed = JSON.parse(localStorage.getItem('choosed')) || {};
         console.log(choosed);
