@@ -1,14 +1,36 @@
-# N年前写的年会抽奖程序
+# Lottery Web Application
 
-[demo](https://fouber.github.io/lottery/)
+[**Demo**](http://hugohu.site)
+
+![image](https://user-images.githubusercontent.com/46556200/230214666-15c6a564-a8d9-410a-97a3-fdfb753d004b.png)
+
+## Usage
+
+Edit ```js/member.js``` file for your own database:
+```js
+var member = [
+  {
+    "genre": "Fried Chicken",
+    "name": "Bojangles"
+  },
+  {
+    "genre": "Causual Mexican",
+    "name": "Monterrey Mexican"
+  },
+  {
+    "genre": "Tex-Mex cuisine",
+    "name": "Chili's Grill"
+  },
+  ...
+```
+
+## Deploy
+
+I suggest you use the auto-deploy platform Netify:
+[**Website**](https://www.netlify.com/?utm_source=google&utm_medium=paid_search&utm_campaign=12755510784&adgroup=118788138897&utm_term=netlify&utm_content=kwd-309804753741&creative=645259053270&device=c&matchtype=b&location=9009749&gclid=Cj0KCQjwuLShBhC_ARIsAFod4fIaFoCTEf_igxOU4Mv4nIDzma8XX8ChoYU69i1O0TzeBwkfuNa8tPoaAjhtEALw_wcB)
+
+## Acknowledge
+
+This project is directly adapted from this [**REPO**](https://github.com/fouber/lottery)
 
 
-
-## 抽奖流程：
-
-1. 选择当次要抽奖的人数（30、10、5、2、1）
-2. 点击『开始』按钮，进入抽奖状态（这个过程仍可修改抽奖人数）
-3. 点击『停！』按钮，生成抽奖结果
-4. 点击任意人数按钮，可以回到闲置状态，已中奖的用户标记为黄色，不会二次命中
-
-PS：滚动鼠标滚轮，可以放大或缩小球体
